@@ -14,15 +14,14 @@ app.use(cors());
 
 // Middleware para parsear el cuerpo de las solicitudes como JSON
 app.use(express.json());
-
+const uri = 'mongodb+srv://camiloprog:x3nJYB8vOBhae6M3@cluster0.o7dxt.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
 // Conexión a MongoDB
-mongoose.connect(process.env.MONGO_URI)
-  .then(() => {
-    console.log('Conexión a MongoDB exitosa');
-  })
-  .catch((err) => {
-    console.error('Error al conectar a MongoDB:', err.message);
-  });
+mongoose.connect(uri, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+  .then(() => console.log('Conectado a MongoDB Atlas'))
+  .catch(err => console.error('Error al conectar a MongoDB:', err));
 
 // Ruta GET para obtener todas las tareas
 app.get('/api/tasks', async (req, res) => {
