@@ -1,0 +1,23 @@
+{
+  "swagger": "2.0",
+  "info": {
+      "version": "1.0.0",
+      "title": "Task Manager API",
+      "description": "API para la gestión de tareas"
+  },
+  "host": "localhost:5000",
+  "basePath": "/api",
+  "paths": {
+      "/tasks": {
+          "get": {
+              "summary": "Obtener tareas",
+              "description": "Devuelve la lista de tareas.",
+              "responses": {
+                  "200": {
+                      "description": "Lista de tareas"
+                  }
+              }
+          }
+      }
+  }
+}
