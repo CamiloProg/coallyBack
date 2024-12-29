@@ -35,9 +35,6 @@
       🔸 3- En cualquier dispositivo: 🩺 <br> 
          Esta diseniado para ser responsive, es decir, podras verlo desde tu pc y tu ceular.    
  </p>
- <p>
-      🔸 4- Tratamientos y Prescripciones Médicas: 💊 <br> Manejo integral de la creación y asociación de tratamientos con pacientes, así como la gestión de prescripciones médicas.
-</p>
       🔹 Extra- Buscador: 🗣 <br> Podras buscar tus tareas por el nombre que le pusiste
       </p>
 </div>
@@ -84,9 +81,7 @@
 ![React](https://img.shields.io/static/v1?style=for-the-badge&message=React&color=222222&logo=React&logoColor=61DAFB&label=)
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
-![Vercel](https://img.shields.io/static/v1?style=for-the-badge&message=Vercel&color=000000&logo=Vercel&logoColor=FFFFFF&label=)
-![Formik](https://img.shields.io/badge/FORMIK-172B4D?style=for-the-badge)
-![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7)
 
   </div>
 
@@ -95,28 +90,14 @@
   </div>
   
   <div align='center'>
-    
-![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white) 
-![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)
-![Hibernate](https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=Hibernate&logoColor=white)
-![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white) 
-![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
-![Cloudinary](https://img.shields.io/badge/Cloudinary-3448C5?style=for-the-badge&logo=Cloudinary&logoColor=white)
-![Render](https://img.shields.io/badge/Render-%46E3B7.svg?style=for-the-badge&logo=render&logoColor=white)
+
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
 ![Swagger](https://img.shields.io/badge/-Swagger-%23Clojure?style=for-the-badge&logo=swagger&logoColor=white)
 
   </div>
 
-<div align='center'>
-  <h2>Organización</h2>
-  </div>
-  
-<div align="center">
-    <img src="https://img.shields.io/badge/Slack-4A154B?logo=slack&logoColor=white" alt="Slack" style="height: 30px;">
-    <img src="https://img.shields.io/badge/Trello-0052CC?logo=trello&logoColor=white" alt="Trello" style="height: 30px;">
-    <img src="https://img.shields.io/badge/Discord-5865F2?logo=Discord&logoColor=white" alt="Trello" style="height: 30px;">
-</div>
 
 <br>
 <br>
