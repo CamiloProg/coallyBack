@@ -1,23 +1,186 @@
 {
-  "swagger": "2.0",
-  "info": {
+    "swagger": "2.0",
+    "info": {
       "version": "1.0.0",
-      "title": "Task Manager API",
-      "description": "API para la gestión de tareas"
-  },
-  "host": "localhost:5000",
-  "basePath": "/api",
-  "paths": {
+      "title": "Task Management API",
+      "description": "API para gestionar tareas."
+    },
+    "host": "localhost:5000",
+    "basePath": "/api",
+    "schemes": ["http"],
+    "paths": {
       "/tasks": {
-          "get": {
-              "summary": "Obtener tareas",
-              "description": "Devuelve la lista de tareas.",
-              "responses": {
-                  "200": {
-                      "description": "Lista de tareas"
-                  }
+        "get": {
+          "summary": "Obtener todas las tareas",
+          "description": "Devuelve una lista de todas las tareas.",
+          "parameters": [
+            {
+              "name": "status",
+              "in": "query",
+              "description": "Filtrar tareas por estado (completed o incompleted).",
+              "required": false,
+              "type": "string",
+              "enum": ["completed", "incompleted"]
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Lista de tareas.",
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/Task"
+                }
               }
+            },
+            "500": {
+              "description": "Error al obtener las tareas."
+            }
           }
+        },
+        "post": {
+          "summary": "Crear una nueva tarea",
+          "description": "Crea una nueva tarea y la guarda en la base de datos.",
+          "parameters": [
+            {
+              "name": "body",
+              "in": "body",
+              "description": "Datos de la nueva tarea.",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/Task"
+              }
+            }
+          ],
+          "responses": {
+            "201": {
+              "description": "Tarea creada exitosamente.",
+              "schema": {
+                "$ref": "#/definitions/Task"
+              }
+            },
+            "400": {
+              "description": "Datos inválidos para la creación de la tarea."
+            },
+            "500": {
+              "description": "Error al crear la tarea."
+            }
+          }
+        }
+      },
+      "/tasks/{id}": {
+        "get": {
+          "summary": "Obtener una tarea por ID",
+          "description": "Devuelve los detalles de una tarea específica.",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "ID de la tarea.",
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Detalles de la tarea.",
+              "schema": {
+                "$ref": "#/definitions/Task"
+              }
+            },
+            "404": {
+              "description": "Tarea no encontrada."
+            },
+            "500": {
+              "description": "Error al obtener la tarea."
+            }
+          }
+        },
+        "put": {
+          "summary": "Actualizar una tarea por ID",
+          "description": "Actualiza los datos de una tarea específica.",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "ID de la tarea.",
+              "required": true,
+              "type": "string"
+            },
+            {
+              "name": "body",
+              "in": "body",
+              "description": "Datos actualizados de la tarea.",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/Task"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Tarea actualizada exitosamente.",
+              "schema": {
+                "$ref": "#/definitions/Task"
+              }
+            },
+            "404": {
+              "description": "Tarea no encontrada."
+            },
+            "500": {
+              "description": "Error al actualizar la tarea."
+            }
+          }
+        },
+        "delete": {
+          "summary": "Eliminar una tarea por ID",
+          "description": "Elimina una tarea específica de la base de datos.",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "ID de la tarea.",
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Tarea eliminada exitosamente."
+            },
+            "404": {
+              "description": "Tarea no encontrada."
+            },
+            "500": {
+              "description": "Error al eliminar la tarea."
+            }
+          }
+        }
       }
+    },
+    "definitions": {
+      "Task": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "ID de la tarea."
+          },
+          "title": {
+            "type": "string",
+            "description": "Título de la tarea."
+          },
+          "description": {
+            "type": "string",
+            "description": "Descripción de la tarea."
+          },
+          "completed": {
+            "type": "boolean",
+            "description": "Estado de la tarea (completada o no)."
+          }
+        },
+        "required": ["title"]
+      }
+    }
   }
-}
+  

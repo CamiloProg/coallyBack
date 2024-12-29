@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 
-// Definir el esquema de la tarea
 const taskSchema = new mongoose.Schema({
     title: {
         type: String,
@@ -12,9 +11,9 @@ const taskSchema = new mongoose.Schema({
     },
     completed: {
         type: Boolean,
-        default: false,  // Establecer un valor por defecto si no se especifica
+        default: false,
     },
-}, { timestamps: true });  // Esto añadirá campos createdAt y updatedAt automáticamente
+}, { timestamps: true });  
 
 // Crear el modelo de tarea
 const Task = mongoose.model('Task', taskSchema);

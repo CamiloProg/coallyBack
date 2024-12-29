@@ -1,2 +1,2 @@
 const cors = require('cors');
-app.use(cors({ origin: 'http://localhost:3000' })); // Adjust port if needed
+app.use(cors({ origin: 'http://localhost:3000' })); 
