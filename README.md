@@ -112,3 +112,45 @@
 
 
 
+<br>
+
+<div align='center'>
+  <h2>🚀 Instalación y Ejecución Local</h2>
+</div>
+
+Requisitos Previos:
+Node.js: Entorno de ejecución para JavaScript.
+Git: Sistema de control de versiones.
+
+<div align='center'>
+  <h2>Pasos de Instalación</h2>
+</div>
+
+Clonar el repositorio
+https://github.com/CamiloProg/coallyBack.git
+y
+https://github.com/CamiloProg/coallyFront.git
+
+Instalar dependencias:
+cd coallyFront || cd coallyBack
+npm i
+
+<div align='center'>
+  <h2>Varialbles de entorno</h2>
+</div>
+
+Backend: 
+PORT=5000
+MONGO_URI=mongodb://localhost:27017/taskmanager
+NODE_ENV=development
+URL = mongodb+srv://camiloprog:x3nJYB8vOBhae6M3@cluster0.o7dxt.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+Frontend:
+VITE_API_URL=https://coallyback.onrender.com/api/tasks
+
+<div align='center'>
+  <h2>Iniciar servidores</h2>
+</div>
+
+
+Backend: node server.js
+Frontend: npm run dev
